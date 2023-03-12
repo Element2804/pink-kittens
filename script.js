@@ -12,14 +12,12 @@ var numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 
 function generatePassword() {
     var password = "";
-    
-    //calculates password based on the contents of the array and the user's choices
+        //calculates password based on the contents of the array and the user's choices
     for(var i = 0; i <passwordLength; i++) {
         var randomPass = Math.floor(Math.random() * userChoice.length);
         password = password + userChoice[randomPass];
     }
     console.log("Button test passed");
-
 
 // Display password
     return password;
@@ -64,7 +62,7 @@ function writePassword() {
  //calls the prompts from the function
     passPrompt();
 
-  var password = generatePassword();
+    var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
