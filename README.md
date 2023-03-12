@@ -8,6 +8,8 @@ The goal of this project was to build a random password generator with the abili
 N/A
 
 ## Usage
+Follow link to start
+- https://element2804.github.io/pink-kittens/
 
 Click on the "Generate Password" button then follow the prompts of yes or no questions to generate your password based on the answers.
 
