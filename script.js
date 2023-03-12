@@ -7,25 +7,21 @@ var upperCase = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M'
 var numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 
 function generatePassword(){
+    var password = "";
+        //calculates password based on the contents of the array and the user's choices
+    for(var i = 0; i <passwordLength; i++) {
+        var randomPass = Math.floor(Math.random() * userChoice.length);
+        password = password + userChoice[randomPass];
+    }
     console.log("button test passed");
-   var selectPass = prompt("select the length of your password");
-   console.log(window)
-
-
-//prompt the user for the password criteria
-// a.password length between 8-128 
-//  b.lowercase, uppercase, numbers, special characters
-// validate the input
-//generate password based on criteria
-
 
 // Display password
-    return "Password here"
+    return password;
 }
 
 // Function containing the password prompts
 function passPrompt () {
-passwordLength = [];
+userChoice = [];
 
 passwordLength = parseInt(prompt("Please select a number between 8 - 128"));
 
