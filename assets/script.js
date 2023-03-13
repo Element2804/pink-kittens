@@ -1,4 +1,6 @@
 // Assignment code here
+
+// empty array to be populated later 
 var userChoice = [];
 // minimum length of password
 var passwordLength = 8;
@@ -25,7 +27,7 @@ function generatePassword(){
 function passPrompt () {
 // resets array between password attempts
     userChoice = [];
-
+// scans the string input and returns a number 
 passwordLength = parseInt(prompt("Please select a number between 8 - 128"));
 
     if(isNaN(passwordLength) || passwordLength < 8 || passwordLength > 128) {
@@ -34,6 +36,7 @@ passwordLength = parseInt(prompt("Please select a number between 8 - 128"));
     }
 
     if(confirm("Would you like to add special characters?")) {
+       // takes the empty array variable and inserts the characters called
         userChoice = userChoice.concat(specialChar);
     }
     
@@ -58,6 +61,7 @@ var generateBtn = document.querySelector("#generate");
 function writePassword() {
     var rightPrompt = passPrompt();
     
+    // verifys the prompt was done correctly before information is returned
     if (rightPrompt) {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
